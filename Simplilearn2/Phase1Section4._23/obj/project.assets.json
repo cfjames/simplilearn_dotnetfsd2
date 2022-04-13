@@ -15,9 +15,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\james\\source\\repos\\simplilearn_dotnetfsd2\\Simplilearn2\\Phase1Section4._23\\Phase1Section4._23.csproj",
-      "projectName": "Phase1Section4._23",
-      "projectPath": "C:\\Users\\james\\source\\repos\\simplilearn_dotnetfsd2\\Simplilearn2\\Phase1Section4._23\\Phase1Section4._23.csproj",
+      "projectUniqueName": "C:\\Users\\james\\source\\repos\\simplilearn_dotnetfsd2\\Simplilearn2\\Phase1Section4._23\\Phase1Section4.23.csproj",
+      "projectName": "Phase1Section4.23",
+      "projectPath": "C:\\Users\\james\\source\\repos\\simplilearn_dotnetfsd2\\Simplilearn2\\Phase1Section4._23\\Phase1Section4.23.csproj",
       "packagesPath": "C:\\Users\\james\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\james\\source\\repos\\simplilearn_dotnetfsd2\\Simplilearn2\\Phase1Section4._23\\obj\\",
       "projectStyle": "PackageReference",
@@ -69,7 +69,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
