@@ -1,0 +1,15 @@
+C:\Users\james\source\repos\simplilearn_dotnetfsd2\Simplilearn2\Phase1Section6.4\bin\Debug\net6.0\Phase1Section6.4.exe
+C:\Users\james\source\repos\simplilearn_dotnetfsd2\Simplilearn2\Phase1Section6.4\bin\Debug\net6.0\Phase1Section6.4.deps.json
+C:\Users\james\source\repos\simplilearn_dotnetfsd2\Simplilearn2\Phase1Section6.4\bin\Debug\net6.0\Phase1Section6.4.runtimeconfig.json
+C:\Users\james\source\repos\simplilearn_dotnetfsd2\Simplilearn2\Phase1Section6.4\bin\Debug\net6.0\Phase1Section6.4.dll
+C:\Users\james\source\repos\simplilearn_dotnetfsd2\Simplilearn2\Phase1Section6.4\bin\Debug\net6.0\Phase1Section6.4.pdb
+C:\Users\james\source\repos\simplilearn_dotnetfsd2\Simplilearn2\Phase1Section6.4\obj\Debug\net6.0\Phase1Section6.4.csproj.AssemblyReference.cache
+C:\Users\james\source\repos\simplilearn_dotnetfsd2\Simplilearn2\Phase1Section6.4\obj\Debug\net6.0\Phase1Section6.4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\james\source\repos\simplilearn_dotnetfsd2\Simplilearn2\Phase1Section6.4\obj\Debug\net6.0\Phase1Section6.4.AssemblyInfoInputs.cache
+C:\Users\james\source\repos\simplilearn_dotnetfsd2\Simplilearn2\Phase1Section6.4\obj\Debug\net6.0\Phase1Section6.4.AssemblyInfo.cs
+C:\Users\james\source\repos\simplilearn_dotnetfsd2\Simplilearn2\Phase1Section6.4\obj\Debug\net6.0\Phase1Section6.4.csproj.CoreCompileInputs.cache
+C:\Users\james\source\repos\simplilearn_dotnetfsd2\Simplilearn2\Phase1Section6.4\obj\Debug\net6.0\Phase1Section6.4.dll
+C:\Users\james\source\repos\simplilearn_dotnetfsd2\Simplilearn2\Phase1Section6.4\obj\Debug\net6.0\refint\Phase1Section6.4.dll
+C:\Users\james\source\repos\simplilearn_dotnetfsd2\Simplilearn2\Phase1Section6.4\obj\Debug\net6.0\Phase1Section6.4.pdb
+C:\Users\james\source\repos\simplilearn_dotnetfsd2\Simplilearn2\Phase1Section6.4\obj\Debug\net6.0\Phase1Section6.4.genruntimeconfig.cache
+C:\Users\james\source\repos\simplilearn_dotnetfsd2\Simplilearn2\Phase1Section6.4\obj\Debug\net6.0\ref\Phase1Section6.4.dll
