@@ -1,0 +1,100 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 text-center">
+            <h4>Form Data capture using ViewData (Updated)</h4>
+        </div>
+        <div class="col-sm-6 text-center">
+            <h4>Form Data capture using ViewBag</h4>
+        </div>
+    </div>
+    <div class="clearfix row">
+        <div class="col-sm-6">
+            <form action="/Home/ViewDataRedirect" method="post">
+                <div class="row">
+                    <div class="col-sm-4">Student Name</div>
+                    <div class="col-sm-8"><input class="form-control" name="name" maxlength="100" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">Address</div>
+                    <div class="col-sm-8"><input class="form-control" name="address" maxlength="100" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">Class</div>
+                    <div class="col-sm-8"><input class="form-control" name="course" maxlength="5" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">Year Of Admission</div>
+                    <div class="col-sm-8"><input class="form-control" name="year" type="number" maxlength="4" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 text-right">
+                        <button class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-sm-6">
+            <form action="/Home/ViewBagSubmit" method="post">
+                <div class="row">
+                    <div class="col-sm-4">Student Name</div>
+                    <div class="col-sm-8"><input class="form-control" name="name" maxlength="100" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">Address</div>
+                    <div class="col-sm-8"><input class="form-control" name="address" maxlength="100" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">Class</div>
+                    <div class="col-sm-8"><input class="form-control" name="course" maxlength="5" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">Year Of Admission</div>
+                    <div class="col-sm-8"><input class="form-control" name="year" type="number" maxlength="4" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 text-right">
+                        <button class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div> <!--row-->
+
+    <div class="clearfix row">
+        <div class="col-sm-6 text-center">
+            <h4>Form Data capture using TempData</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <form action="/Home/TempDataRedirect" method="post">
+                <div class="row">
+                    <div class="col-sm-4">Student Name</div>
+                    <div class="col-sm-8"><input class="form-control" name="name" maxlength="100" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">Address</div>
+                    <div class="col-sm-8"><input class="form-control" name="address" maxlength="100" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">Class</div>
+                    <div class="col-sm-8"><input class="form-control" name="course" maxlength="5" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">Year Of Admission</div>
+                    <div class="col-sm-8"><input class="form-control" name="year" type="number" maxlength="4" /></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 text-right">
+                        <button class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div> <!--row--->
+</div>

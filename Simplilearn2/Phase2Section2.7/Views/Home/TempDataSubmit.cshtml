@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TempDataSubmit</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-6">
+            <h4>Results from TempData</h4>
+            @Html.Raw(TempData["name"] + "<br>" + TempData["address"] + "<br>" + TempData["course"] + "<br>" + TempData["year"])
+
+        </div>
+    </div>
+</body>
+</html>
