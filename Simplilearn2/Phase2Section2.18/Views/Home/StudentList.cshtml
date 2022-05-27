@@ -1,0 +1,52 @@
+﻿@model IEnumerable<StudentModel>
+@{
+    ViewData["Title"] = "Student List";
+}
+
+<h1>Student List</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label asp-for="@Model.First().Name"></label>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Course)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr id="@("row" + item.StudentID)">
+            <td>
+                <input asp-for="@item.Name" class="form-control-plaintext" readonly />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                <a href="javascript: $('@("#row" + item.StudentID)').load('/Home/StudentListEditRow/@item.StudentID');">Edit</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

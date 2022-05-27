@@ -1,0 +1,22 @@
+﻿@model StudentModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<td>
+    <input asp-for="Name" />
+</td>
+<td>
+    @Html.EditorFor(model => model.Address)
+</td>
+<td>
+    @Html.EditorFor(model => model.Course)
+</td>
+<td>
+    @Html.EditorFor(model => model.ContactEmail)
+</td>
+<td>
+    @Html.EditorFor(model => model.Age)
+</td>
+<td>
+    <a href="javascript: $('@("#row" + Model.StudentID)').load('/Home/StudentListDisplayRow/@Model.StudentID');">Cancel</a>
+</td>
