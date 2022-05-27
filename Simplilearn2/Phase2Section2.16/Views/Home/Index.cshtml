@@ -1,0 +1,108 @@
+﻿@model StudentModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <br />
+    <h4 class="col-sm-12 text-center">Student Details Form (Get)</h4>
+    @using(Html.BeginForm("StudentGet", "Home", FormMethod.Get))
+    {
+        <div class="row">
+            <div class="col-sm-4 text-right">
+                <label asp-for="Name"></label>
+            </div>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="Name" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 text-right">
+                <label asp-for="Address"></label>
+            </div>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="Address" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 text-right">
+                <label asp-for="Course"></label>
+            </div>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="Course" />
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-4 text-right">
+            <label asp-for="ContactEmail"></label>
+        </div>
+        <div class="col-sm-8">
+            <input class="form-control" asp-for="ContactEmail" />
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 text-right">
+                <label asp-for="Age"></label>
+            </div>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="Age" />
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-12 text-right">
+            <button class="btn btn-default">Submit</button>
+        </div>
+    </div>
+    }
+    <br />
+    <br />
+    <h4 class="col-sm-12 text-center">Student Details Form (Post)</h4>
+    <form method="post" asp-controller="Home" asp-action="StudentPost">
+        <div class="row">
+            <div class="col-sm-4 text-right">
+                <label asp-for="Name"></label>
+            </div>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="Name" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 text-right">
+                <label asp-for="Address"></label>
+            </div>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="Address" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 text-right">
+                <label asp-for="Course"></label>
+            </div>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="Course" />
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-4 text-right">
+            <label asp-for="ContactEmail"></label>
+        </div>
+        <div class="col-sm-8">
+            <input class="form-control" asp-for="ContactEmail" />
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 text-right">
+                <label asp-for="Age"></label>
+            </div>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="Age" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-right">
+                <button class="btn btn-default">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+

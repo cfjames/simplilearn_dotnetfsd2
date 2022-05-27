@@ -1,0 +1,65 @@
+﻿@model StudentModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <h4 class="col-sm-12 text-center">Student</h4>
+    <form method="post" asp-controller="Home" asp-action="FormAction">
+        <div class="row">
+            <div class="col-sm-4 text-right">
+                <label asp-for="Name"></label>
+            </div>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="Name" />
+                <span asp-validation-for="Name" style="color: red;"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 text-right">
+                <label asp-for="Address"></label>
+            </div>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="Address" />
+                <span asp-validation-for="Address" style="color: red;"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 text-right">
+                <label asp-for="Course"></label>
+            </div>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="Course" />
+                <span asp-validation-for="Course" style="color: red;"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 text-right">
+                <label asp-for="ContactEmail"></label>
+            </div>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="ContactEmail" />
+                <span asp-validation-for="ContactEmail" style="color: red;"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 text-right">
+                <label asp-for="Age"></label>
+            </div>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="Age" />
+                <span asp-validation-for="Age" style="color: red;"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-right">
+                <button class="btn btn-default">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+}

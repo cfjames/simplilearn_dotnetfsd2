@@ -63,13 +63,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase1Section7.9JRH", "Phas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalNugetRepo", "LocalNugetRepo\LocalNugetRepo.csproj", "{DFE77022-201C-407D-BECC-F57BEE56865D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section2.1", "Phase2Section2.1\Phase2Section2.1.csproj", "{DF2F6998-9C56-4859-A882-DB707A147213}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section2.1", "Phase2Section2.1\Phase2Section2.1.csproj", "{DF2F6998-9C56-4859-A882-DB707A147213}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section2.5", "Phase2Section2.5\Phase2Section2.5.csproj", "{8FF4CC09-706F-4701-9D45-C2497AF8D77D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section2.5", "Phase2Section2.5\Phase2Section2.5.csproj", "{8FF4CC09-706F-4701-9D45-C2497AF8D77D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section2.7", "Phase2Section2.7\Phase2Section2.7.csproj", "{5A66AD11-54D2-4D78-ACDA-62473A147FE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section2.7", "Phase2Section2.7\Phase2Section2.7.csproj", "{5A66AD11-54D2-4D78-ACDA-62473A147FE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section2.9", "Phase2Section2.9\Phase2Section2.9.csproj", "{DD7FE561-6AF5-4E40-99EA-9AFCCCEA64D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section2.9", "Phase2Section2.9\Phase2Section2.9.csproj", "{DD7FE561-6AF5-4E40-99EA-9AFCCCEA64D7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section2.10", "Phase2Section2.10\Phase2Section2.10.csproj", "{DE879822-6E23-47FB-BF08-DB70E15348D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section2.12", "Phase2Section2.12\Phase2Section2.12.csproj", "{644145D0-6773-42F8-89DD-AAAB2DBB562C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section2.14", "Phase2Section2.14\Phase2Section2.14.csproj", "{1BFC96B6-4EEB-44F7-9B56-A1AF51BC35C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section2.16", "Phase2Section2.16\Phase2Section2.16.csproj", "{9503D7A1-F9D3-4D1D-91A5-B53934E6BDBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section2.18", "Phase2Section2.18\Phase2Section2.18.csproj", "{5352C6FE-4B63-49EF-A4D5-39893C28FE23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -213,6 +223,26 @@ Global
 		{DD7FE561-6AF5-4E40-99EA-9AFCCCEA64D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD7FE561-6AF5-4E40-99EA-9AFCCCEA64D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD7FE561-6AF5-4E40-99EA-9AFCCCEA64D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE879822-6E23-47FB-BF08-DB70E15348D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE879822-6E23-47FB-BF08-DB70E15348D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE879822-6E23-47FB-BF08-DB70E15348D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE879822-6E23-47FB-BF08-DB70E15348D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{644145D0-6773-42F8-89DD-AAAB2DBB562C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{644145D0-6773-42F8-89DD-AAAB2DBB562C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{644145D0-6773-42F8-89DD-AAAB2DBB562C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{644145D0-6773-42F8-89DD-AAAB2DBB562C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BFC96B6-4EEB-44F7-9B56-A1AF51BC35C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BFC96B6-4EEB-44F7-9B56-A1AF51BC35C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BFC96B6-4EEB-44F7-9B56-A1AF51BC35C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BFC96B6-4EEB-44F7-9B56-A1AF51BC35C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9503D7A1-F9D3-4D1D-91A5-B53934E6BDBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9503D7A1-F9D3-4D1D-91A5-B53934E6BDBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9503D7A1-F9D3-4D1D-91A5-B53934E6BDBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9503D7A1-F9D3-4D1D-91A5-B53934E6BDBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5352C6FE-4B63-49EF-A4D5-39893C28FE23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5352C6FE-4B63-49EF-A4D5-39893C28FE23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5352C6FE-4B63-49EF-A4D5-39893C28FE23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5352C6FE-4B63-49EF-A4D5-39893C28FE23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
