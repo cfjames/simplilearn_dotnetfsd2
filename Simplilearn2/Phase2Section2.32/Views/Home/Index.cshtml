@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    void Template(string[] listItems, string style)
+    {
+        <ul>
+            @foreach(var listItem in listItems)
+            {
+                <li class="@style">@listItem</li>
+            }
+        </ul>  
+    }
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@{Template(new[] {"A", "B", "C"}, "pretty");}
+@{Template(new[] {"X", "Y", "Z"}, "lesspretty");}
+
+<email>Support</email> <!-- Render <a href="mailto:Support@contoso.com">Email Support</a>-->
+<br />
+<email mail-to="Support@contosonew.com">send support email</email><!--Renders <a href="mailto:Support@contoso.com">send support email</a>-->

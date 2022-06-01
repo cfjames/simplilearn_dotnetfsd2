@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 
 namespace Phase2Section2._10.Models
 {
+    [ModelMetadataType(typeof(StudentMetadata))]
     public partial class Student
     {
         public int Id { get; set; }
