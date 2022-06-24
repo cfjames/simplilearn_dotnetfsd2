@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "StudentList";
+}
+
+<h1>StudentList</h1>
+<div class="container">
+    <br />
+    <h4>List Of Students</h4>
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="row">
+                <div class="col-sm-3">Name/Marks</div>
+                <div class="col-sm-3">Email</div>
+                <div class="col-sm-3">Class</div>
+                <div class="col-sm-3">Address </div>
+            </div>
+            <hr />
+            @{
+                List<Student> students = (List<Student>)ViewData["students"];
+                foreach (Student st in students)
+                {
+                    <div class="row">
+                        <div class="col-sm-3">@st.Name - @st.Grades%</div>
+                        <div class="col-sm-3">@st.Email</div>
+                        <div class="col-sm-3">@st.Course</div>
+                        <div class="col-sm-3">@st.Address </div>
+                    </div>
+                }
+            }
+            <div class="clearfix"></div><br />
+            Min.Marks: @ViewData["minGrade"] %<br>
+            Max.Marks: @ViewData["maxGrade"] %<br>
+            Sum of Marks: @ViewData["sumGrades"]<br>
+            Count of Marks: @ViewData["countGrade"]<br>
+            Average Marks: @ViewData["avgGrade"] %<br>
+        </div>
+    </div>
+</div>
+
+

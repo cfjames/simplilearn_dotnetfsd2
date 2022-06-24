@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <br />
+    <div class="row">
+        <div class="col-sm-7">
+            <h4>List of all Students</h4>
+            @{
+                Student[] arr = (Student[])ViewData["students"];
+                for (var i = 0; i < @arr.Length; i++)
+                {
+                    <div class="row">
+                        <div class="col-sm-2">@arr[i].Name</div>
+                        <div class="col-sm-2">@arr[i].Email</div>
+                        <div class="col-sm-2">@arr[i].Address</div>
+                        <div class="col-sm-2">@arr[i].Course</div>
+                    </div>
+                }
+            }
+            <br />
+
+            <h4>List of Students filtered on ID</h4>
+            @{
+                arr = (Student[])ViewData["idfilter"];
+
+                {
+                    for (var i = 0; i < @arr.Length; i++)
+                    {
+                        <div class="row">
+                            <div class="col-sm-2">@arr[i].Name</div>
+                            <div class="col-sm-2">@arr[i].Email</div>
+                            <div class="col-sm-2">@arr[i].Address</div>
+                            <div class="col-sm-2">@arr[i].Course</div>
+                        </div>
+                    }
+                }
+            }
+            <br />
+
+            <h4>List of Students filtered on Email</h4>
+            @{
+                arr = (Student[])ViewData["emailfilter"];
+                for (var i = 0; i < @arr.Length; i++)
+                {
+                    <div class="row">
+                        <div class="col-sm-2">@arr[i].Name</div>
+                        <div class="col-sm-2">@arr[i].Email</div>
+                        <div class="col-sm-2">@arr[i].Address</div>
+                        <div class="col-sm-2">@arr[i].Course</div>
+                    </div>
+                }
+            }
+            <br />
+        </div>
+    </div>
+</div>
+ 
+
