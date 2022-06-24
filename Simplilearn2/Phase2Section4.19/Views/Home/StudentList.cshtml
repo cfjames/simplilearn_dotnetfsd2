@@ -1,0 +1,139 @@
+﻿@model StudentListModel
+@{
+    ViewData["Title"] = "StudentList";
+}
+
+<h2>Student List</h2>
+<div class="container">
+    <h4>List of All Students</h4>
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="row">
+                <div class="col-sm-3">Name/Grade</div>
+                <div class="col-sm-3">Email</div>
+                <div class="col-sm-3">Course</div>
+                <div class="col-sm-3">Address</div>
+            </div>
+            <hr />
+            @{
+                foreach (StudentModel st in Model.FullList)
+                {
+                    <div class="row">
+                        <div class="col-sm-3">@st.Name - @st.Grades</div>
+                        <div class="col-sm-3">@st.ContactEmail</div>
+                        <div class="col-sm-3">@st.Course</div>
+                        <div class="col-sm-3">@st.Address</div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="clearfix"></div><br />
+    <h4>First Student</h4>
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="row">
+                <div class="col-sm-3">Name/Grade</div>
+                <div class="col-sm-3">Email</div>
+                <div class="col-sm-3">Course</div>
+                <div class="col-sm-3">Address</div>
+            </div>
+            <hr />
+            @{
+                <div class="row">
+                    <div class="col-sm-3">@Model.FirstStudent.Name - @Model.FirstStudent.Grades</div>
+                    <div class="col-sm-3">@Model.FirstStudent.ContactEmail</div>
+                    <div class="col-sm-3">@Model.FirstStudent.Course</div>
+                    <div class="col-sm-3">@Model.FirstStudent.Address</div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="clearfix"></div><br />
+    <h4>Last Student</h4>
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="row">
+                <div class="col-sm-3">Name/Grade</div>
+                <div class="col-sm-3">Email</div>
+                <div class="col-sm-3">Course</div>
+                <div class="col-sm-3">Address</div>
+            </div>
+            <hr />
+            @{
+                <div class="row">
+                    <div class="col-sm-3">@Model.LastStudent.Name - @Model.LastStudent.Grades</div>
+                    <div class="col-sm-3">@Model.LastStudent.ContactEmail</div>
+                    <div class="col-sm-3">@Model.LastStudent.Course</div>
+                    <div class="col-sm-3">@Model.LastStudent.Address</div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="clearfix"></div><br />
+    <h4>Third Student</h4>
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="row">
+                <div class="col-sm-3">Name/Grade</div>
+                <div class="col-sm-3">Email</div>
+                <div class="col-sm-3">Course</div>
+                <div class="col-sm-3">Address</div>
+            </div>
+            <hr />
+            @{
+                <div class="row">
+                    <div class="col-sm-3">@Model.ThirdStudent?.Name - @Model.ThirdStudent.Grades</div>
+                    <div class="col-sm-3">@Model.ThirdStudent.ContactEmail</div>
+                    <div class="col-sm-3">@Model.ThirdStudent.Course</div>
+                    <div class="col-sm-3">@Model.ThirdStudent.Address</div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="clearfix"></div><br />
+    <h4>First Student with 90%</h4>
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="row">
+                <div class="col-sm-3">Name/Grade</div>
+                <div class="col-sm-3">Email</div>
+                <div class="col-sm-3">Course</div>
+                <div class="col-sm-3">Address</div>
+            </div>
+            <hr />
+            @{
+                <div class="row">
+                    <div class="col-sm-3">@Model.FirstWith90Percent.Name - @Model.FirstWith90Percent.Grades</div>
+                    <div class="col-sm-3">@Model.FirstWith90Percent.ContactEmail</div>
+                    <div class="col-sm-3">@Model.FirstWith90Percent.Course</div>
+                    <div class="col-sm-3">@Model.FirstWith90Percent.Address</div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="clearfix"></div><br />
+    <h4>Empty List</h4>
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="row">
+                <div class="col-sm-3">Name/Grade</div>
+                <div class="col-sm-3">Email</div>
+                <div class="col-sm-3">Course</div>
+                <div class="col-sm-3">Address</div>
+            </div>
+            <hr />
+            @{
+                foreach (StudentModel st in Model.EmptyList)
+                {
+                    <div class="row">
+                        <div class="col-sm-3">@st?.Name - @st?.Grades</div>
+                        <div class="col-sm-3">@st?.ContactEmail</div>
+                        <div class="col-sm-3">@st?.Course</div>
+                        <div class="col-sm-3">@st?.Address</div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+﻿@model StudentListModel
+@{
+    ViewData["Title"] = "Student List";
+}
+
+<h4>List of All Students (paged)</h4>
+<div class="row">
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-3">Name/Grade</div>
+            <div class="col-sm-3">Email</div>
+            <div class="col-sm-3">Course</div>
+            <div class="col-sm-3">Address</div>
+        </div>
+        <hr />
+        @{
+            foreach (StudentModel st in Model.FullList)
+            {
+                <div class="row">
+                    <div class="col-sm-3">@st.Name - @st.Grades</div>
+                    <div class="col-sm-3">@st.ContactEmail</div>
+                    <div class="col-sm-3">@st.Course</div>
+                    <div class="col-sm-3">@st.Address</div>
+                </div>
+            }
+        }
+        <div class="row">
+            <div class="col-sm-3">
+                <a asp-action="StudentListNext" asp-route-page=@ViewBag.PageNumber>Next&gt;</a>
+            </div>
+            <div class="col-sm-3"> Page @ViewBag.PageNumber</div>
+            <div class="col-sm-3">
+                @if (((int)@ViewBag.PageNumber) > 1)
+                {
+                    <a asp-action="StudentListPrev" asp-route-page=@ViewBag.PageNumber>&lt;Prev</a>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+

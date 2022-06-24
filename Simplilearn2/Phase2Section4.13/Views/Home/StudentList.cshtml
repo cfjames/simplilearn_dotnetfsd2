@@ -1,0 +1,40 @@
+﻿@model IEnumerable<StudentModel>
+@{
+    ViewData["Title"] = "Student List";
+}
+
+<h2>Student List</h2>
+<div class="container">
+    <br />
+    <a asp-action="StudentList">Database Order</a>&nbsp;&nbsp;
+    <a asp-action="StudentListNA">Name Asc</a>&nbsp;&nbsp;
+    <a asp-action="StudentListND">Name Desc</a>&nbsp;&nbsp;
+    <a asp-action="StudentListGNA">Grade/Name Asc</a>&nbsp;&nbsp;
+    <a asp-action="StudentListGND">Grade/Name Desc</a>&nbsp;&nbsp;
+    <a asp-action="StudentListGAND">Grade Asc/Name Desc</a>&nbsp;&nbsp;
+    <a asp-action="StudentListNR">Name Rev</a>&nbsp;&nbsp;
+</div>
+
+<h4>List of Students (@ViewBag.SortType)</h4>
+<div class="row">
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-3">Name/Grade</div>
+            <div class="col-sm-3">Email</div>
+            <div class="col-sm-3">Course</div>
+            <div class="col-sm-3">Address</div>
+        </div>
+        <hr />
+        @{
+            foreach (StudentModel st in Model)
+            {
+                <div class="row">
+                    <div class="col-sm-3">@st.Name - @st.Grades</div>
+                    <div class="col-sm-3">@st.ContactEmail</div>
+                    <div class="col-sm-3">@st.Course</div>
+                    <div class="col-sm-3">@st.Address</div>
+                </div>
+            }
+        }
+    </div>
+</div>

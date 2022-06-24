@@ -1,0 +1,126 @@
+﻿@model StudentListModel
+@{
+    ViewData["Title"] = "Student List";
+}
+
+<h4>List of All Students</h4>
+<div class="row">
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-3">Name/Grade</div>
+            <div class="col-sm-3">Email</div>
+            <div class="col-sm-3">Course</div>
+            <div class="col-sm-3">Address</div>
+        </div>
+        <hr />
+        @{
+            foreach (StudentModel st in Model.FullList)
+            {
+                <div class="row">
+                    <div class="col-sm-3">@st.Name - @st.Grades</div>
+                    <div class="col-sm-3">@st.ContactEmail</div>
+                    <div class="col-sm-3">@st.Course</div>
+                    <div class="col-sm-3">@st.Address</div>
+                </div>
+            }
+        }
+    </div>
+</div>
+<div class="clearfix"></div><br />
+<h4>List of First 3 Students</h4>
+<div class="row">
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-3">Name/Grade</div>
+            <div class="col-sm-3">Email</div>
+            <div class="col-sm-3">Course</div>
+            <div class="col-sm-3">Address</div>
+        </div>
+        <hr />
+        @{
+            foreach (StudentModel st in Model.TakeList)
+            {
+                <div class="row">
+                    <div class="col-sm-3">@st.Name - @st.Grades</div>
+                    <div class="col-sm-3">@st.ContactEmail</div>
+                    <div class="col-sm-3">@st.Course</div>
+                    <div class="col-sm-3">@st.Address</div>
+                </div>
+            }
+        }
+    </div>
+</div>
+<div class="clearfix"></div><br />
+<h4>List of Students stopping at the first student with a grade > 90</h4>
+<div class="row">
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-3">Name/Grade</div>
+            <div class="col-sm-3">Email</div>
+            <div class="col-sm-3">Course</div>
+            <div class="col-sm-3">Address</div>
+        </div>
+        <hr />
+        @{
+            foreach (StudentModel st in Model.TakeWhileList)
+            {
+                <div class="row">
+                    <div class="col-sm-3">@st.Name - @st.Grades</div>
+                    <div class="col-sm-3">@st.ContactEmail</div>
+                    <div class="col-sm-3">@st.Course</div>
+                    <div class="col-sm-3">@st.Address</div>
+                </div>
+            }
+        }
+    </div>
+</div>
+<div class="clearfix"></div><br />
+<h4>List of All Student beyond the first 3</h4>
+<div class="row">
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-3">Name/Grade</div>
+            <div class="col-sm-3">Email</div>
+            <div class="col-sm-3">Course</div>
+            <div class="col-sm-3">Address</div>
+        </div>
+        <hr />
+        @{
+            foreach (StudentModel st in Model.SkipList)
+            {
+                <div class="row">
+                    <div class="col-sm-3">@st.Name - @st.Grades</div>
+                    <div class="col-sm-3">@st.ContactEmail</div>
+                    <div class="col-sm-3">@st.Course</div>
+                    <div class="col-sm-3">@st.Address</div>
+                </div>
+            }
+        }
+    </div>
+</div>
+<div class="clearfix"></div><br />
+<h4>List of Students from the first student with a grade > 90</h4>
+<div class="row">
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-3">Name/Grade</div>
+            <div class="col-sm-3">Email</div>
+            <div class="col-sm-3">Course</div>
+            <div class="col-sm-3">Address</div>
+        </div>
+        <hr />
+        @{
+            foreach (StudentModel st in Model.SkipWhileList)
+            {
+                <div class="row">
+                    <div class="col-sm-3">@st.Name - @st.Grades</div>
+                    <div class="col-sm-3">@st.ContactEmail</div>
+                    <div class="col-sm-3">@st.Course</div>
+                    <div class="col-sm-3">@st.Address</div>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+

@@ -1,0 +1,228 @@
+﻿@{
+    ViewData["Title"] = "Student List";
+}
+
+<h4>List of All Students</h4>
+<div class="row">
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-3">Name/Grade</div>
+            <div class="col-sm-3">Email</div>
+            <div class="col-sm-3">Course</div>
+            <div class="col-sm-3">Address</div>
+        </div>
+        <hr />
+        @{
+            List<Student> students = (List<Student>)ViewData["students"];
+            foreach (Student st in students)
+            {
+                <div class="row">
+                    <div class="col-sm-3">@st.Name - @st.Grades</div>
+                    <div class="col-sm-3">@st.Email</div>
+                    <div class="col-sm-3">@st.Course</div>
+                    <div class="col-sm-3">@st.Address</div>
+                </div>
+            }
+        }
+    </div>
+</div>
+<div class="clearfix"></div><br />
+<h4>List of All Students as List</h4>
+<div class="row">
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-3">Name/Grade</div>
+            <div class="col-sm-3">Email</div>
+            <div class="col-sm-3">Course</div>
+            <div class="col-sm-3">Address</div>
+        </div>
+        <hr />
+        @{
+            List<Student> toList = (List<Student>)ViewData["toList"];
+            foreach (Student st in toList)
+            {
+                <div class="row">
+                    <div class="col-sm-3">@st.Name - @st.Grades</div>
+                    <div class="col-sm-3">@st.Email</div>
+                    <div class="col-sm-3">@st.Course</div>
+                    <div class="col-sm-3">@st.Address</div>
+                </div>
+            }
+        }
+    </div>
+</div>
+<div class="clearfix"></div><br />
+<h4>List of All Student as Array</h4>
+<div class="row">
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-3">Name/Grade</div>
+            <div class="col-sm-3">Email</div>
+            <div class="col-sm-3">Course</div>
+            <div class="col-sm-3">Address</div>
+        </div>
+        <hr />
+        @{
+            Student[] toArray = (Student[])ViewData["toArray"];
+            foreach (Student st in toArray)
+            {
+                <div class="row">
+                    <div class="col-sm-3">@st.Name - @st.Grades</div>
+                    <div class="col-sm-3">@st.Email</div>
+                    <div class="col-sm-3">@st.Course</div>
+                    <div class="col-sm-3">@st.Address</div>
+                </div>
+            }
+        }
+    </div>
+</div>
+<div class="clearfix"></div><br />
+<h4>List of All Student as Look with Grades = 85</h4>
+<div class="row">
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-3">Name/Grade</div>
+            <div class="col-sm-3">Email</div>
+            <div class="col-sm-3">Course</div>
+            <div class="col-sm-3">Address</div>
+        </div>
+        <hr />
+        @{
+            List<Student> lookupList = (List<Student>)ViewData["lookupList"];
+            foreach (Student st in lookupList)
+            {
+                <div class="row">
+                    <div class="col-sm-3">@st.Name - @st.Grades</div>
+                    <div class="col-sm-3">@st.Email</div>
+                    <div class="col-sm-3">@st.Course</div>
+                    <div class="col-sm-3">@st.Address</div>
+                </div>
+            }
+        }
+    </div>
+</div>
+<div class="clearfix"></div><br />
+<h4>List of All Students as Cast </h4>
+<div class="row">
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-3">Name/Grade</div>
+            <div class="col-sm-3">Email</div>
+            <div class="col-sm-3">Course</div>
+            <div class="col-sm-3">Address</div>
+        </div>
+        <hr />
+        @{
+            IEnumerable<Student> cast = (IEnumerable<Student>)ViewData["cast"];
+            foreach (Student st in cast)
+            {
+                <div class="row">
+                    <div class="col-sm-3">@st.Name - @st.Grades</div>
+                    <div class="col-sm-3">@st.Email</div>
+                    <div class="col-sm-3">@st.Course</div>
+                    <div class="col-sm-3">@st.Address</div>
+                </div>
+            }
+        }
+    </div>
+</div>
+<div class="clearfix"></div><br />
+<h4>List of All Students as OfType </h4>
+<div class="row">
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-3">Name/Grade</div>
+            <div class="col-sm-3">Email</div>
+            <div class="col-sm-3">Course</div>
+            <div class="col-sm-3">Address</div>
+        </div>
+        <hr />
+        @{
+            List<Student> ofType = (List<Student>)ViewData["ofType"];
+            foreach (Student st in ofType)
+            {
+                <div class="row">
+                    <div class="col-sm-3">@st.Name - @st.Grades</div>
+                    <div class="col-sm-3">@st.Email</div>
+                    <div class="col-sm-3">@st.Course</div>
+                    <div class="col-sm-3">@st.Address</div>
+                </div>
+            }
+        }
+    </div>
+</div>
+<div class="clearfix"></div><br />
+<h4>List of All Students as IEnumerable </h4>
+<div class="row">
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-3">Name/Grade</div>
+            <div class="col-sm-3">Email</div>
+            <div class="col-sm-3">Course</div>
+            <div class="col-sm-3">Address</div>
+        </div>
+        <hr />
+        @{
+            IEnumerable<Student> ienum = (IEnumerable<Student>)ViewData["ienum"];
+            foreach (Student st in ienum)
+            {
+                <div class="row">
+                    <div class="col-sm-3">@st.Name - @st.Grades</div>
+                    <div class="col-sm-3">@st.Email</div>
+                    <div class="col-sm-3">@st.Course</div>
+                    <div class="col-sm-3">@st.Address</div>
+                </div>
+            }
+        }
+    </div>
+</div>
+<div class="clearfix"></div><br />
+<h4>List of All Students as IQueryable </h4>
+<div class="row">
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-3">Name/Grade</div>
+            <div class="col-sm-3">Email</div>
+            <div class="col-sm-3">Course</div>
+            <div class="col-sm-3">Address</div>
+        </div>
+        <hr />
+        @{
+            IQueryable<Student> query = (IQueryable<Student>)ViewData["query"];
+            foreach (Student st in query)
+            {
+                <div class="row">
+                    <div class="col-sm-3">@st.Name - @st.Grades</div>
+                    <div class="col-sm-3">@st.Email</div>
+                    <div class="col-sm-3">@st.Course</div>
+                    <div class="col-sm-3">@st.Address</div>
+                </div>
+            }
+        }
+    </div>
+</div>
+<div class="clearfix"></div><br />
+<h4>List of All Students as Dictionary (Name=>Address) </h4>
+<div class="row">
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-3">Name</div>
+            <div class="col-sm-3">Address</div>
+        </div>
+        <hr />
+        @{
+            Dictionary<string, string> dictionary = (Dictionary<string, string>)ViewData["dictionary"];
+            foreach (var st in dictionary)
+            {
+                <div class="row">
+                    <div class="col-sm-3">@st.Key</div>
+                    <div class="col-sm-3">@st.Value</div>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+
+
+
