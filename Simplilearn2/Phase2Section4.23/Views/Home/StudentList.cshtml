@@ -1,0 +1,103 @@
+﻿@model StudentListModel
+@{
+    ViewData["Title"] = "StudentList";
+}
+
+<h2>Student List</h2>
+<div class="container">
+    <h4>List of All Students</h4>
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="row">
+                <div class="col-sm-3">Name/Grade</div>
+                <div class="col-sm-3">Email</div>
+                <div class="col-sm-3">Course</div>
+                <div class="col-sm-3">Address</div>
+            </div>
+            <hr />
+            @{
+                foreach (StudentModel st in Model.FullList)
+                {
+                    <div class="row">
+                        <div class="col-sm-3">@st.Name - @st.Grades</div>
+                        <div class="col-sm-3">@st.ContactEmail</div>
+                        <div class="col-sm-3">@st.Course</div>
+                        <div class="col-sm-3">@st.Address</div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="clearfix"></div><br />
+    <h4>StudentList Inner Join with Subjects</h4>
+    <div class="row">
+        <div class="col-sm-3">Name</div>
+        <div class="col-sm-3">Email</div>
+        <div class="col-sm-3">Course</div>
+        <div class="col-sm-3">Subject </div>
+    </div>
+    <hr />
+    @foreach (dynamic st in Model.InnerJoin)
+    {
+        <div class="row">
+            <div class="col-sm-3">@st.GetType().GetProperty("Name").GetValue(st, null)</div>
+            <div class="col-sm-3">@st.GetType().GetProperty("ContactEmail").GetValue(st, null)</div>
+            <div class="col-sm-3">@st.GetType().GetProperty("Course").GetValue(st, null)</div>
+            <div class="col-sm-3">@st.GetType().GetProperty("Subject").GetValue(st, null) </div>
+        </div>
+    }
+    <div class="clearfix"></div><br />
+    <h4>StudentList Left Join with Subjects</h4>
+    <div class="row">
+        <div class="col-sm-3">Name</div>
+        <div class="col-sm-3">Email</div>
+        <div class="col-sm-3">Course</div>
+        <div class="col-sm-3">Subject </div>
+    </div>
+    <hr />
+    @foreach (dynamic st in Model.LeftJoin)
+    {
+        <div class="row">
+            <div class="col-sm-3">@st.GetType().GetProperty("Name").GetValue(st, null)</div>
+            <div class="col-sm-3">@st.GetType().GetProperty("ContactEmail").GetValue(st, null)</div>
+            <div class="col-sm-3">@st.GetType().GetProperty("Course").GetValue(st, null)</div>
+            <div class="col-sm-3">@st.GetType().GetProperty("Subject").GetValue(st, null) </div>
+        </div>
+    }
+    <div class="clearfix"></div><br />
+    <h4>StudentList Cross Join with Subjects</h4>
+    <div class="row">
+        <div class="col-sm-3">Name</div>
+        <div class="col-sm-3">Email</div>
+        <div class="col-sm-3">Course</div>
+        <div class="col-sm-3">Subject </div>
+    </div>
+    <hr />
+    @foreach (dynamic st in Model.CrossJoin)
+    {
+        <div class="row">
+            <div class="col-sm-3">@st.GetType().GetProperty("Name").GetValue(st, null)</div>
+            <div class="col-sm-3">@st.GetType().GetProperty("ContactEmail").GetValue(st, null)</div>
+            <div class="col-sm-3">@st.GetType().GetProperty("Course").GetValue(st, null)</div>
+            <div class="col-sm-3">@st.GetType().GetProperty("Subject").GetValue(st, null) </div>
+        </div>
+    }
+    <div class="clearfix"></div><br />
+    <h4>StudentList Group Join with Subjects</h4>
+    <hr />
+    @foreach (dynamic st in Model.GroupJoin)
+    {
+        var subs = @st.GetType().GetProperty("Subjects").GetValue(st, null);
+        <div class="row">
+            <div class="col-sm-12"><b>@st.GetType().GetProperty("Name").GetValue(st, null)</b>
+               <br />
+               @foreach (var sub in subs) { @sub.GetType().GetProperty("Name").GetValue(sub, null)<br />}   
+               <br />
+            </div>
+            
+        </div>
+    }
+</div>
+
+
+

@@ -1,0 +1,123 @@
+﻿@model StudentListModel
+@{
+    ViewData["Title"] = "StudentList";
+}
+
+<h2>Student List</h2>
+<div class="container">
+    <h4>List of All Students</h4>
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="row">
+                <div class="col-sm-3">Name/Grade</div>
+                <div class="col-sm-3">Email</div>
+                <div class="col-sm-3">Course</div>
+                <div class="col-sm-3">Address</div>
+            </div>
+            <hr />
+            @{
+                foreach (StudentModel st in Model.FullList)
+                {
+                    <div class="row">
+                        <div class="col-sm-3">@st.Name - @st.Grades</div>
+                        <div class="col-sm-3">@st.ContactEmail</div>
+                        <div class="col-sm-3">@st.Course</div>
+                        <div class="col-sm-3">@st.Address</div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="clearfix"></div><br />
+    <h4>StudentList Union</h4>
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="row">
+                <div class="col-sm-3">Name/Grade</div>
+                <div class="col-sm-3">Email</div>
+                <div class="col-sm-3">Course</div>
+                <div class="col-sm-3">Address</div>
+            </div>
+            <hr />
+            @{
+                foreach (StudentModel st in Model.UnionList)
+                {
+                    <div class="row">
+                        <div class="col-sm-3">@st.Name - @st.Grades</div>
+                        <div class="col-sm-3">@st.ContactEmail</div>
+                        <div class="col-sm-3">@st.Course</div>
+                        <div class="col-sm-3">@st.Address</div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="clearfix"></div><br />
+    <h4>StudentList Intersect</h4>
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="row">
+                <div class="col-sm-3">Name/Grade</div>
+                <div class="col-sm-3">Email</div>
+                <div class="col-sm-3">Course</div>
+                <div class="col-sm-3">Address</div>
+            </div>
+            <hr />
+            @{
+                foreach (StudentModel st in Model.IntersectList)
+                {
+                    <div class="row">
+                        <div class="col-sm-3">@st.Name - @st.Grades</div>
+                        <div class="col-sm-3">@st.ContactEmail</div>
+                        <div class="col-sm-3">@st.Course</div>
+                        <div class="col-sm-3">@st.Address</div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="clearfix"></div><br />
+    <h4>StudentList Distinct Grades</h4>
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="row">
+                <div class="col-sm-12">Grade</div>
+            </div>
+            <hr />
+            @{
+                foreach (dynamic st in Model.DistinctList)
+                {
+                    <div class="row">
+                        <div class="col-sm-12">@st.GetType().GetProperty("Grades").GetValue(st, null)</div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="clearfix"></div><br />
+    <h4>StudentList Except</h4>
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="row">
+                <div class="col-sm-3">Name/Grade</div>
+                <div class="col-sm-3">Email</div>
+                <div class="col-sm-3">Course</div>
+                <div class="col-sm-3">Address</div>
+            </div>
+            <hr />
+            @{
+                foreach (StudentModel st in Model.ExceptList)
+                {
+                    <div class="row">
+                        <div class="col-sm-3">@st.Name - @st.Grades</div>
+                        <div class="col-sm-3">@st.ContactEmail</div>
+                        <div class="col-sm-3">@st.Course</div>
+                        <div class="col-sm-3">@st.Address</div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+
