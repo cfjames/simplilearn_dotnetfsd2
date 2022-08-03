@@ -101,43 +101,47 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section3.5", "Phase2S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section3.6", "Phase2Section3.6\Phase2Section3.6.csproj", "{5375BA16-E177-434A-BD7C-9916201A99AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section4.5", "Phase2Section4.5\Phase2Section4.5.csproj", "{C108654C-5158-42F5-818A-CEEFC4E83CD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section4.5", "Phase2Section4.5\Phase2Section4.5.csproj", "{C108654C-5158-42F5-818A-CEEFC4E83CD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentAdoDAL", "StudentAdoDAL\StudentAdoDAL.csproj", "{70EE60A3-368F-496C-A8D6-AA04D03A1053}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentAdoDAL", "StudentAdoDAL\StudentAdoDAL.csproj", "{70EE60A3-368F-496C-A8D6-AA04D03A1053}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section4.7", "Phase2Section4.7\Phase2Section4.7.csproj", "{DAD2149B-E359-4778-9AD6-436FF1BF6581}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section4.7", "Phase2Section4.7\Phase2Section4.7.csproj", "{DAD2149B-E359-4778-9AD6-436FF1BF6581}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section4.9", "Phase2Section4.9\Phase2Section4.9.csproj", "{248F59D4-5571-457A-BFDA-3CE1EFB41B28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section4.9", "Phase2Section4.9\Phase2Section4.9.csproj", "{248F59D4-5571-457A-BFDA-3CE1EFB41B28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section4.13", "Phase2Section4.13\Phase2Section4.13.csproj", "{DEA37391-3CA8-4891-87A9-30E8A0C5AE73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section4.13", "Phase2Section4.13\Phase2Section4.13.csproj", "{DEA37391-3CA8-4891-87A9-30E8A0C5AE73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section4.15", "Phase2Section4.15\Phase2Section4.15.csproj", "{F4CAA255-AFC0-4350-81BD-B4A230D1B814}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section4.15", "Phase2Section4.15\Phase2Section4.15.csproj", "{F4CAA255-AFC0-4350-81BD-B4A230D1B814}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section4.17", "Phase2Section4.17\Phase2Section4.17.csproj", "{4F6F8ECA-B3D0-434A-A66A-4D52F12B79D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section4.17", "Phase2Section4.17\Phase2Section4.17.csproj", "{4F6F8ECA-B3D0-434A-A66A-4D52F12B79D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section4.19", "Phase2Section4.19\Phase2Section4.19.csproj", "{7C196400-5D01-47FC-BAE3-55C10C7AAF65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section4.19", "Phase2Section4.19\Phase2Section4.19.csproj", "{7C196400-5D01-47FC-BAE3-55C10C7AAF65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section4.21", "Phase2Section4.21\Phase2Section4.21.csproj", "{57608BD8-0A45-497F-9263-4047F935B185}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section4.21", "Phase2Section4.21\Phase2Section4.21.csproj", "{57608BD8-0A45-497F-9263-4047F935B185}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section4.23", "Phase2Section4.23\Phase2Section4.23.csproj", "{25D98407-DD32-4096-8ECC-C9146793C893}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section4.23", "Phase2Section4.23\Phase2Section4.23.csproj", "{25D98407-DD32-4096-8ECC-C9146793C893}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section4.25", "Phase2Section4.25\Phase2Section4.25.csproj", "{4BE99B7F-6C30-401F-B5FF-AC56175FF637}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section4.25", "Phase2Section4.25\Phase2Section4.25.csproj", "{4BE99B7F-6C30-401F-B5FF-AC56175FF637}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section5.1", "Phase2Section5.1\Phase2Section5.1.csproj", "{2E593C77-7CD9-484A-8C62-7574072760AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section5.1", "Phase2Section5.1\Phase2Section5.1.csproj", "{2E593C77-7CD9-484A-8C62-7574072760AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section5.1a", "Phase2Section5.1a\Phase2Section5.1a.csproj", "{5DD783B2-F762-4726-A1B1-DEE2C351C838}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section5.1a", "Phase2Section5.1a\Phase2Section5.1a.csproj", "{5DD783B2-F762-4726-A1B1-DEE2C351C838}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section5.2", "Phase2Section5.2\Phase2Section5.2.csproj", "{A8C4DA3B-06F2-4772-A2F3-BECA872D404B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section5.2", "Phase2Section5.2\Phase2Section5.2.csproj", "{A8C4DA3B-06F2-4772-A2F3-BECA872D404B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section5.5", "Phase2Section5.5\Phase2Section5.5.csproj", "{AEB657E5-985D-426A-A659-77C84B7E4010}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section5.5", "Phase2Section5.5\Phase2Section5.5.csproj", "{AEB657E5-985D-426A-A659-77C84B7E4010}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section5.7", "Phase2Section5.7\Phase2Section5.7.csproj", "{135EA3DB-E6A9-4017-B001-0E89FE82627F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section5.7", "Phase2Section5.7\Phase2Section5.7.csproj", "{135EA3DB-E6A9-4017-B001-0E89FE82627F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section5.7a", "Phase2Section5.7a\Phase2Section5.7a.csproj", "{E3EC2658-4E99-423A-9C36-E2B395B96576}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section5.7a", "Phase2Section5.7a\Phase2Section5.7a.csproj", "{E3EC2658-4E99-423A-9C36-E2B395B96576}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section5.8", "Phase2Section5.8\Phase2Section5.8.csproj", "{F027467A-41EE-4B38-866B-08CF2F0DB49F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section5.8", "Phase2Section5.8\Phase2Section5.8.csproj", "{F027467A-41EE-4B38-866B-08CF2F0DB49F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase2Section5.9", "Phase2Section5.9\Phase2Section5.9.csproj", "{FB850D34-9D07-4D93-AC3D-B4D4386FAF93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phase2Section5.9", "Phase2Section5.9\Phase2Section5.9.csproj", "{FB850D34-9D07-4D93-AC3D-B4D4386FAF93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase3Section2", "Phase3Section2\Phase3Section2.csproj", "{8457EBC0-5462-4482-ACC1-6D92629D1671}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phase3Section3", "Phase3Section3\Phase3Section3.csproj", "{B36B338B-40B2-423B-BFE2-3ABC178D004D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -417,6 +421,14 @@ Global
 		{FB850D34-9D07-4D93-AC3D-B4D4386FAF93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB850D34-9D07-4D93-AC3D-B4D4386FAF93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB850D34-9D07-4D93-AC3D-B4D4386FAF93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8457EBC0-5462-4482-ACC1-6D92629D1671}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8457EBC0-5462-4482-ACC1-6D92629D1671}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8457EBC0-5462-4482-ACC1-6D92629D1671}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8457EBC0-5462-4482-ACC1-6D92629D1671}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B36B338B-40B2-423B-BFE2-3ABC178D004D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B36B338B-40B2-423B-BFE2-3ABC178D004D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B36B338B-40B2-423B-BFE2-3ABC178D004D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B36B338B-40B2-423B-BFE2-3ABC178D004D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

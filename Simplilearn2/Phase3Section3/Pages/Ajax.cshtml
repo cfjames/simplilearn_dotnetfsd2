@@ -1,0 +1,81 @@
+﻿@page
+@model Phase3Section3.Pages.AjaxModel
+@{
+}
+<html>
+<body>
+    <header>
+        <h1> Lesson 3 Demos </h1>
+        <p> Ajax without Fetch and Promise</p>
+
+    </header>
+
+    <script language="javascript" type="text/javascript">
+        function ajax_call_demo() {
+            if (window.XMLHttpRequest || window.ActiveXObject) {
+                if (window.ActiveXObject) {
+                    try {
+                        xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (exception) {
+                        xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                } else {
+                    xhttp = new XMLHttpRequest();
+                }
+            } else {
+                alert("Your browser does not support XMLHttpRequest...!");
+            }
+
+            xhttp.open("GET", "https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", true);  // Make sure file is in same server
+            xhttp.overrideMimeType('text/plain; charset=x-user-defined');
+            xhttp.send(null);
+
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState == 4) {
+                    if ((xhttp.status == 200) || (xhttpr.status == 0)) {
+                        var image = document.getElementById("get_img");
+                        image.src = "data:image/gif;base64," + encode64(xhttp.responseText);
+                    } else {
+                        alert("Something misconfiguration : " +
+                            "\nError Code : " + xhttp.status +
+                            "\nError Message : " + xhttp.responseText);
+                    }
+                }
+            };
+        }
+
+        function encode64(inputStr) {
+            var b64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+            var outputStr = "";
+            var i = 0;
+
+            while (i < inputStr.length) {
+                var byte1 = inputStr.charCodeAt(i++) & 0xff;
+                var byte2 = inputStr.charCodeAt(i++) & 0xff;
+                var byte3 = inputStr.charCodeAt(i++) & 0xff;
+
+                var enc1 = byte1 >> 2;
+                var enc2 = ((byte1 & 3) << 4) | (byte2 >> 4);
+
+                var enc3, enc4;
+                if (isNaN(byte2)) {
+                    enc3 = enc4 = 64;
+                } else {
+                    enc3 = ((byte2 & 15) << 2) | (byte3 >> 6);
+                    if (isNaN(byte3)) {
+                        enc4 = 64;
+                    } else {
+                        enc4 = byte3 & 63;
+                    }
+                }
+                outputStr += b64.charAt(enc1) + b64.charAt(enc2) + b64.charAt(enc3) + b64.charAt(enc4);
+            }
+            return outputStr;
+        }
+    </script>
+
+    <button onClick="ajax_call_demo()">Click here to get an image</button><br />
+    <img id="get_img" />
+    <input type="text" />
+</body>
+</html>
