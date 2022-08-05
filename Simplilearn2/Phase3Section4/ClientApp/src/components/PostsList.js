@@ -1,7 +1,7 @@
 ﻿import React, { Component } from 'react';
 import PostDetail from './PostDetail';
 
-export class Posts extends Component {
+export class PostsList extends Component {
     constructor() {
         super();
 
@@ -9,7 +9,15 @@ export class Posts extends Component {
 
         this.state = {
             loadingCategories: true,
+            loadingPosts: true,
             post: {
+                id: 0,
+                title: '',
+                body: '',
+                author: '',
+                category: ''
+            },
+            postCleared: {
                 id: 0,
                 title: '',
                 body: '',
@@ -21,34 +29,35 @@ export class Posts extends Component {
             //    { code: 'redux', name: 'Redux' },
             //    { code: 'angular', name: 'Angular' }
             //],
-            posts: [
-                {
-                    id: 1,
-                    title: 'Introduction to React',
-                    body: 'This post provides an intro to React',
-                    author: 'Hari',
-                    category: 'react'
-                },
-                {
-                    id: 2,
-                    title: 'Advanced React',
-                    body: 'This post discusses advanced features of React',
-                    author: 'Ram',
-                    category: 'react'
-                },
-                {
-                    id: 3,
-                    title: 'Introduction to Redux',
-                    body: 'This post provides an intro to Redux',
-                    author: 'Shiv',
-                    category: 'redux'
-                }
-            ]
+            //posts: [
+            //    {
+            //        id: 1,
+            //        title: 'Introduction to React',
+            //        body: 'This post provides an intro to React',
+            //        author: 'Hari',
+            //        category: 'react'
+            //    },
+            //    {
+            //        id: 2,
+            //        title: 'Advanced React',
+            //        body: 'This post discusses advanced features of React',
+            //        author: 'Ram',
+            //        category: 'react'
+            //    },
+            //    {
+            //        id: 3,
+            //        title: 'Introduction to Redux',
+            //        body: 'This post provides an intro to Redux',
+            //        author: 'Shiv',
+            //        category: 'redux'
+            //    }
+            //]
         };
     }
 
     componentDidMount() {
         this.populateCategoryData();
+        this.populatePostData();
     }
 
     async populateCategoryData() {
@@ -57,16 +66,73 @@ export class Posts extends Component {
         this.setState({ categories: data, loadingCategories: false });
     }
 
+    async populatePostData() {
+        const response = await fetch('blogposts');
+        const data = await response.json();
+        this.setState({ posts: data, loadingPosts: false });
+    }
+
+    handleEditCallback = (postToEdit) => {
+        this.setState({post : postToEdit})
+    }
+
+    handleDeleteCallback = (postId) => {
+        let postIndex = this.state.posts.findIndex(p => p.id === postId)
+        if (postIndex !== -1) {
+            fetch('blogposts/' + postId, {
+                method: 'DELETE'
+            }).then(response => response)
+                .then(data => {
+                    let postsUpdated = this.state.posts;
+                    postsUpdated.splice(postIndex, 1);
+                    this.setState({ posts: postsUpdated });
+                }).catch((error) => {
+                    console.error('Error', error);
+                });
+        }
+    }
+
     handleFormSubmit(event) {
         event.preventDefault();
         console.log('this:', this);
         console.log('Form submitted:', this.state.post);
-        this.setState((prevState) => {
-            const id = prevState.posts.length === 0 ? 1 :
-                prevState.posts[prevState.posts.length - 1].id + 1;
-            const post = { ...this.state.post, id: id };
-            return { posts: [post, ...prevState.posts] };
-        });
+
+        //we are adding a blog post via a POST method
+        if (this.state.post.id === 0) {
+            fetch('blogposts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(this.state.post)
+            }).then(response => response.json())
+                .then(data => {              
+                        let postsUpdated = this.state.posts;
+                        postsUpdated.push(data);
+                        this.setState({ post: this.state.postCleared, posts: postsUpdated })
+                }).catch((error) => {
+                    console.error('Error', error);
+                });
+        }
+        else {
+            fetch('blogposts/' + this.state.post.id, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(this.state.post)
+            }).then(response => response)
+                .then(data => {
+                    if (data.status === 204) {
+                        let postIndex = this.state.posts.findIndex(p => p.id === this.state.post.id)
+                        let postsUpdated = this.state.posts;
+                        postsUpdated[postIndex] = this.state.post;
+                        this.setState({ post: this.state.postCleared, posts: postsUpdated })
+                    }
+                }).catch((error) => {
+                    console.error('Error', error);
+                });
+        }
     }
 
     handleTitleChange = (e) => {
@@ -148,14 +214,22 @@ export class Posts extends Component {
     }
 
     renderPosts() {
+        if (this.state.loadingPosts)
+            return (<p><em>Loading Posts...</em></p>)
+        else if (this.state.posts.length == 0)
+            return (<div className="col-sm-8"><p><em>No Blog Posts Available...</em></p></div>)
+        else {
         return (
             <div className="col-sm-8">
                 <h3>Posts</h3>
                 {this.state.posts.map((post) => {
-                    return <PostDetail key={post.id} post={post} />
+                    return <PostDetail key={post.id} post={post}
+                        parentEditCallback={this.handleEditCallback}
+                        parentDeleteCallback={this.handleDeleteCallback} />
                 })}
             </div>
-        );
+            );
+        }
     }
 
     render() {

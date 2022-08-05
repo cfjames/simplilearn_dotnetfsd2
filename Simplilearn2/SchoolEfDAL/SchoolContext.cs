@@ -15,11 +15,13 @@ namespace SchoolEfDAL
 
         public DbSet<StudentModel> Students { get; set; }
         public DbSet<SubjectModel> Subjects { get; set; }
+        public DbSet<PostModel> Posts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<StudentModel>().ToTable("Student");
             modelBuilder.Entity<SubjectModel>().ToTable("Subject");
+            modelBuilder.Entity<PostModel>().ToTable("Post");
         }
     }
 

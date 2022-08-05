@@ -1,6 +1,6 @@
 ﻿import React, { Component } from 'react';
 import Header from './Header';
-import { Posts } from './Posts';
+import { PostsList } from './PostsList';
 
 export class Blog extends Component {
 
@@ -12,7 +12,7 @@ export class Blog extends Component {
         return (
             <div className="container">
                 <Header headerName="Blogging App" />
-                <Posts/>
+                <PostsList/>
             </div>
             );
     }
