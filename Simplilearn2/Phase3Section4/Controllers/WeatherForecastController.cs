@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Phase3Section4.Models;
 
 namespace Phase3Section4.Controllers
 {

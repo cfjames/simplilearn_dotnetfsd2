@@ -11,7 +11,7 @@ const PostDetail = (props) => {
                 <p className="card-text">{props.post.category}</p>
             </div>
             <div className="card-footer">
-                <button className="btn btn-sm button-outline-danger"
+                <button className="btn btn-sm btn-outline-danger"
                     type="button">Delete</button>
             </div>
         </div>

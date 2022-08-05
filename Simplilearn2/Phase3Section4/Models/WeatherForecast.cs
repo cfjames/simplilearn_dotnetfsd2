@@ -1,4 +1,4 @@
-namespace Phase3Section4
+namespace Phase3Section4.Models
 {
     public class WeatherForecast
     {
