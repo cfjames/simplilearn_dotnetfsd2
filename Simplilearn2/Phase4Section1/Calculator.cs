@@ -2,8 +2,22 @@
 {
     public class Calculator : ICalculator
     {
+
+        private IDBDAO _dBDAO;
+
+        public Calculator()
+        { 
+            _dBDAO = new DBDAO();
+        }
+
+        public Calculator(IDBDAO dBDAO)
+        {
+            _dBDAO = dBDAO;
+        }
+
         public int Add(int x, int y)
         {
+            _dBDAO.GetData();
             return x + y;
         }
 
@@ -16,6 +30,26 @@
             }
 
             return Add(a, b);
+        }
+
+        public int Subtract(int x, int y)
+        {
+            if (x < 0 || y < 0)
+                throw new ArgumentOutOfRangeException("x"); 
+            return x - y;
+        }
+    }
+
+    public interface IDBDAO
+    {
+        string GetData();
+    }
+
+    public class DBDAO : IDBDAO
+    {
+        public string GetData()
+        {
+            return "Got Data from Database";
         }
     }
 }

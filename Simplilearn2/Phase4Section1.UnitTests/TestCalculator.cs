@@ -30,7 +30,7 @@ namespace Phase4Section1.UnitTests
         }
 
         [Test]
-        public void Add_2_NonIntegerStrings_Returns_InvalidOperationException()
+        public void Add_2_NonIntegerStrings_Throws_InvalidOperationException()
         {
             //Assert
             Assert.Throws<InvalidOperationException>(()=> 
@@ -65,7 +65,7 @@ namespace Phase4Section1.UnitTests
         [TestCase("Bob", "cat")]
         [TestCase("10.5","20")]
         [TestCase("20", "10.5")]
-        public void Add_Various_Strings_Returns_InvalidOperationException_TestCases(string x, string y)
+        public void Add_Various_Strings_Throws_InvalidOperationException_TestCases(string x, string y)
         {
             //Assert
             Assert.Throws<InvalidOperationException>(() =>
@@ -83,13 +83,45 @@ namespace Phase4Section1.UnitTests
 
         [Test]
         [TestCaseSource("TestCasesAddWith2InvalidStrings")]
-        public void Add_Various_Strings_Returns_InvalidOperationException_TestCaseFile(string x, string y)
+        public void Add_Various_Strings_Throws_InvalidOperationException_TestCaseFile(string x, string y)
         {
             //Assert
             Assert.Throws<InvalidOperationException>(() =>
                 //Act
                 calculator.Add(x, y)
             );
+        }
+
+        [Test]
+        public void Subtract_2_Integers_Returns_Valid_Integer()
+        {
+            //Act
+            int answer = calculator.Subtract(10, 5);
+            //Assert
+            Assert.AreEqual(5, answer);
+        }
+
+        [Test]
+        public void Subtract_2_Integers_1_Negative_Throws_ArgumentOutOfRangeException()
+        {
+            //Assert
+            Assert.Throws<ArgumentOutOfRangeException>(() =>
+                //Act
+                calculator.Subtract(10, -5)
+            );
+        }
+
+        [Test]
+        public void Add_2_Integers_withMockDB_Returns_Valid_Integer()
+        {
+            //Arrange
+            IDBDAO dBDAO = new MockDBDAO();
+            ICalculator calculatorWithMockDb = new Calculator(dBDAO);
+
+            //Act
+            int answer = calculatorWithMockDb.Add(5, 19);
+            //Assert
+            Assert.AreEqual(24, answer);
         }
 
         private static List<TestCaseData> TestCasesAddWith2Ints
@@ -148,6 +180,14 @@ namespace Phase4Section1.UnitTests
 
                 return testCases;
             }
+        }
+    }
+
+    public class MockDBDAO : IDBDAO
+    {
+        public string GetData()
+        {
+            return "Data from Hardcoded List";
         }
     }
 }

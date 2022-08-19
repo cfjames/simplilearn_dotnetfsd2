@@ -10,5 +10,6 @@ namespace Phase4Section1
     {
         int Add(int x, int y);
         int Add(string x, string y);
+        int Subtract(int x, int y);
     }
 }
