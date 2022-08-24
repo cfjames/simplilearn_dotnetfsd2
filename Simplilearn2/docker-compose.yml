@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  phase4section2:
+    image: ${DOCKER_REGISTRY-}phase4section2
+    build:
+      context: .
+      dockerfile: Phase4Section2/Dockerfile
+
+  phase4section2a:
+    image: ${DOCKER_REGISTRY-}phase4section2a
+    build:
+      context: .
+      dockerfile: Phase4Section2a/Dockerfile
+
+  redis:
+    image: redis
