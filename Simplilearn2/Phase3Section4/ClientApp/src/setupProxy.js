@@ -12,7 +12,7 @@ const context =  [
 
 module.exports = function(app) {
   const appProxy = createProxyMiddleware(context, {
-    target: target,
+      target: "http://Phase3Section4a",
     secure: false,
     headers: {
       Connection: 'Keep-Alive'

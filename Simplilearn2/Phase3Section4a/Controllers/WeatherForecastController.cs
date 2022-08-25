@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Phase3Section4.Models;
+using Phase3Section4a.Models;
 
-namespace Phase3Section4.Controllers
+namespace Phase3Section4a.Controllers
 {
     [ApiController]
     [Route("[controller]")]

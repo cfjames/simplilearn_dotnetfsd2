@@ -1,17 +1,26 @@
 version: '3.4'
 
 services:
-  phase4section2:
-    image: ${DOCKER_REGISTRY-}phase4section2
+  phase3section4:
+    image: ${DOCKER_REGISTRY-}phase3section4
     build:
       context: .
-      dockerfile: Phase4Section2/Dockerfile
+      dockerfile: Phase3Section4/Dockerfile
+    ports:
+      - "44494:44494"
+    depends_on:
+      - phase3section4a
 
-  phase4section2a:
-    image: ${DOCKER_REGISTRY-}phase4section2a
+  phase3section4a:
+    image: ${DOCKER_REGISTRY-}phase3section4a
     build:
       context: .
-      dockerfile: Phase4Section2a/Dockerfile
+      dockerfile: Phase3Section4a/Dockerfile
+    depends_on:
+      - db
 
-  redis:
-    image: redis
+  db:
+    image: "mcr.microsoft.com/mssql/server"
+    environment:
+        SA_PASSWORD: "!QWe4567"
+        ACCEPT_EULA: "Y"

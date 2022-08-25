@@ -3,10 +3,10 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>f0fbe69d-7ee3-4e11-ba5d-85ee1be701ed</ProjectGuid>
+    <ProjectGuid>a22e78c0-115d-4fe6-af21-a0e20767e10b</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
-    <DockerServiceName>phase4section2</DockerServiceName>
+    <DockerServiceName>phase3section4</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

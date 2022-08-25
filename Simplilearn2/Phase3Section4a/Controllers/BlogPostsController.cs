@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SchoolEfDAL;
 
-namespace Phase3Section4.Controllers
+namespace Phase3Section4a.Controllers
 {
     [Route("[controller]")]
     [ApiController]

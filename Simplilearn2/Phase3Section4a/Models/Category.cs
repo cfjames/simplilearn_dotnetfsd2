@@ -1,4 +1,4 @@
-﻿namespace Phase3Section4.Models
+﻿namespace Phase3Section4a.Models
 {
     public class Category
     {
